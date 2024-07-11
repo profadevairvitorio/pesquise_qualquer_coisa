@@ -25,7 +25,7 @@ async function search(query) {
 }
 
 function buildEndpoint(query) {
-    const baseUrl = 'https://en.wikipedia.org/w/api.php';
+    const baseUrl = 'https://pt.wikipedia.org/w/api.php';
     const params = new URLSearchParams({
         action: 'query',
         list: 'search',
@@ -59,7 +59,7 @@ function clearResults(container) {
 function createResultItem(result) {
     const li = document.createElement('li');
     const a = document.createElement('a');
-    a.href = `https://en.wikipedia.org/?curid=${result.pageid}`;
+    a.href = `https://pt.wikipedia.org/?curid=${result.pageid}`;
     a.textContent = result.title;
     li.appendChild(a);
     return li;
